@@ -1,0 +1,25 @@
+{
+	"name": "3MinTrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "mie1628pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 3,
+				"startTime": "2022-07-13T17:22:00",
+				"endTime": "2022-07-14T17:22:00",
+				"timeZone": "Eastern Standard Time"
+			}
+		}
+	}
+}
