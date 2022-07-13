@@ -51,9 +51,15 @@
 								}
 							},
 							"sink": {
-								"type": "AzureSqlSink",
-								"writeBehavior": "insert",
-								"sqlWriterUseTableLock": false
+								"type": "DelimitedTextSink",
+								"storeSettings": {
+									"type": "AzureBlobStorageWriteSettings"
+								},
+								"formatSettings": {
+									"type": "DelimitedTextWriteSettings",
+									"quoteAllText": true,
+									"fileExtension": ".txt"
+								}
 							},
 							"enableStaging": false,
 							"translator": {
@@ -65,9 +71,9 @@
 											"ordinal": 1
 										},
 										"sink": {
-											"name": "Year",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 1
 										}
 									},
 									{
@@ -76,9 +82,9 @@
 											"ordinal": 2
 										},
 										"sink": {
-											"name": "Occupation",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 2
 										}
 									},
 									{
@@ -87,9 +93,9 @@
 											"ordinal": 3
 										},
 										"sink": {
-											"name": "MajorCategory",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 3
 										}
 									},
 									{
@@ -98,9 +104,9 @@
 											"ordinal": 4
 										},
 										"sink": {
-											"name": "MinorCategory",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 4
 										}
 									},
 									{
@@ -109,9 +115,9 @@
 											"ordinal": 5
 										},
 										"sink": {
-											"name": "TotalWorkers",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 5
 										}
 									},
 									{
@@ -120,9 +126,9 @@
 											"ordinal": 6
 										},
 										"sink": {
-											"name": "WorkersMale",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 6
 										}
 									},
 									{
@@ -131,9 +137,9 @@
 											"ordinal": 7
 										},
 										"sink": {
-											"name": "WorkersFemale",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 7
 										}
 									},
 									{
@@ -142,9 +148,9 @@
 											"ordinal": 8
 										},
 										"sink": {
-											"name": "PercentFemale",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 8
 										}
 									},
 									{
@@ -153,9 +159,9 @@
 											"ordinal": 9
 										},
 										"sink": {
-											"name": "TotalEarnings",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 9
 										}
 									},
 									{
@@ -164,9 +170,9 @@
 											"ordinal": 10
 										},
 										"sink": {
-											"name": "TotalEarningsMale",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 10
 										}
 									},
 									{
@@ -175,9 +181,9 @@
 											"ordinal": 11
 										},
 										"sink": {
-											"name": "TotalEarningsFemale",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 11
 										}
 									},
 									{
@@ -186,9 +192,9 @@
 											"ordinal": 12
 										},
 										"sink": {
-											"name": "WagePercentOfMale",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 12
 										}
 									},
 									{
@@ -197,9 +203,9 @@
 											"ordinal": 13
 										},
 										"sink": {
-											"name": "TotalFullTime",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 13
 										}
 									},
 									{
@@ -208,9 +214,9 @@
 											"ordinal": 14
 										},
 										"sink": {
-											"name": "TotalPartTime",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 14
 										}
 									},
 									{
@@ -219,9 +225,9 @@
 											"ordinal": 15
 										},
 										"sink": {
-											"name": "FullTimeFemale",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 15
 										}
 									},
 									{
@@ -230,9 +236,9 @@
 											"ordinal": 16
 										},
 										"sink": {
-											"name": "PartTimeFemale",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 16
 										}
 									},
 									{
@@ -241,9 +247,9 @@
 											"ordinal": 17
 										},
 										"sink": {
-											"name": "FullTimeMale",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 17
 										}
 									},
 									{
@@ -252,9 +258,9 @@
 											"ordinal": 18
 										},
 										"sink": {
-											"name": "PartTimeMale",
 											"type": "String",
-											"physicalType": "varchar"
+											"physicalType": "String",
+											"ordinal": 18
 										}
 									}
 								],
@@ -274,7 +280,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "OutputSqlDataset",
+								"referenceName": "outputDataset",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -289,7 +295,7 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/gender_jobs_distribution2')]",
-				"[concat(variables('factoryId'), '/datasets/OutputSqlDataset')]"
+				"[concat(variables('factoryId'), '/datasets/outputDataset')]"
 			]
 		},
 		{
