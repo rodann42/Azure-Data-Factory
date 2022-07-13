@@ -475,7 +475,7 @@
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"runtimeState": "Started",
+				"runtimeState": "Stopped",
 				"pipelines": [
 					{
 						"pipelineReference": {
@@ -491,6 +491,37 @@
 						"frequency": "Minute",
 						"interval": 3,
 						"startTime": "2022-07-13T16:41:00",
+						"timeZone": "Eastern Standard Time"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/mie1628pipeline')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/3MinTrigger')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "mie1628pipeline",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Minute",
+						"interval": 3,
+						"startTime": "2022-07-13T17:22:00",
+						"endTime": "2022-07-14T17:22:00",
 						"timeZone": "Eastern Standard Time"
 					}
 				}
