@@ -42,8 +42,8 @@
 								},
 								"sink": {
 									"name": "Year",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -86,8 +86,8 @@
 								},
 								"sink": {
 									"name": "TotalWorkers",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -97,8 +97,8 @@
 								},
 								"sink": {
 									"name": "WorkersMale",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -108,8 +108,8 @@
 								},
 								"sink": {
 									"name": "WorkersFemale",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -119,8 +119,8 @@
 								},
 								"sink": {
 									"name": "PercentFemale",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -130,8 +130,8 @@
 								},
 								"sink": {
 									"name": "TotalEarnings",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -141,8 +141,8 @@
 								},
 								"sink": {
 									"name": "TotalEarningsMale",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -152,8 +152,8 @@
 								},
 								"sink": {
 									"name": "TotalEarningsFemale",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -174,8 +174,8 @@
 								},
 								"sink": {
 									"name": "TotalFullTime",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -185,8 +185,8 @@
 								},
 								"sink": {
 									"name": "TotalPartTime",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -196,8 +196,8 @@
 								},
 								"sink": {
 									"name": "FullTimeFemale",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -207,8 +207,8 @@
 								},
 								"sink": {
 									"name": "PartTimeFemale",
-									"type": "Int32",
-									"physicalType": "int"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -218,8 +218,8 @@
 								},
 								"sink": {
 									"name": "FullTimeMale",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -229,8 +229,8 @@
 								},
 								"sink": {
 									"name": "PartTimeMale",
-									"type": "Double",
-									"physicalType": "float"
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							}
 						],
