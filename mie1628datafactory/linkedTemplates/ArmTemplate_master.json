@@ -7,13 +7,13 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "mie1628datafactory"
 		},
-		"AzureStorageLinkedService_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService'"
-		},
 		"AzureSqlDatabaseLinkedService_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLinkedService'"
+		},
+		"AzureStorageLinkedService_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureStorageLinkedService'"
 		},
 		"containerUri": {
 			"type": "string",
@@ -42,11 +42,11 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"AzureStorageLinkedService_connectionString": {
-						"value": "[parameters('AzureStorageLinkedService_connectionString')]"
-					},
 					"AzureSqlDatabaseLinkedService_connectionString": {
 						"value": "[parameters('AzureSqlDatabaseLinkedService_connectionString')]"
+					},
+					"AzureStorageLinkedService_connectionString": {
+						"value": "[parameters('AzureStorageLinkedService_connectionString')]"
 					}
 				}
 			},

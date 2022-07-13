@@ -5,10 +5,10 @@
 		"factoryName": {
 			"value": "mie1628datafactory"
 		},
-		"AzureStorageLinkedService_connectionString": {
+		"AzureSqlDatabaseLinkedService_connectionString": {
 			"value": ""
 		},
-		"AzureSqlDatabaseLinkedService_connectionString": {
+		"AzureStorageLinkedService_connectionString": {
 			"value": ""
 		}
 	}
