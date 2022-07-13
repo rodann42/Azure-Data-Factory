@@ -1,0 +1,24 @@
+{
+	"name": "ScheduleTrigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "mie1628pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 3,
+				"startTime": "2022-07-13T16:41:00",
+				"timeZone": "Eastern Standard Time"
+			}
+		}
+	}
+}
