@@ -509,7 +509,7 @@
 				"typeProperties": {
 					"recurrence": {
 						"frequency": "Minute",
-						"interval": 3,
+						"interval": 1,
 						"startTime": "2022-07-13T17:22:00",
 						"endTime": "2022-07-14T17:22:00",
 						"timeZone": "Eastern Standard Time"
